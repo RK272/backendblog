@@ -20,8 +20,7 @@ COPY . /app
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Install PyAudio (if still needed separately)
-# RUN pip install --no-cache-dir pyaudio  # Comment this out if pyaudio is already in requirements.txt
+
 
 # Define the command to run the application
 CMD ["python3", "app.py"]
