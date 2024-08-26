@@ -1,9 +1,22 @@
+# Use the official Python image from the Docker Hub
 FROM python:3.10-slim-buster
 
-RUN apt update -y && apt install awscli -y
+# Install system dependencies
+RUN apt-get update -y && \
+    apt-get install -y --no-install-recommends \
+    awscli \
+    gcc \
+    python3-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set the working directory
 WORKDIR /app
 
+# Copy application files
 COPY . /app
-RUN pip install -r requirements.txt
 
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Define the command to run the application
 CMD ["python3", "app.py"]
