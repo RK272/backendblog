@@ -16,7 +16,7 @@ langchainhub
 langserve
 langsmith
 markdown-it-py
-
+python-dotenv
 mysql-connector-python
 
 numpy==1.26.4
