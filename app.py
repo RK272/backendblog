@@ -138,7 +138,7 @@ add_routes(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://107.22.129.92:8080/"],  # Or ["*"] to allow all origins
+    allow_origins=["http://107.22.129.92:8080"],  # Or ["*"] to allow all origins
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
