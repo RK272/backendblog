@@ -4,6 +4,7 @@ faiss-cpu==1.8.0.post1
 fastapi
 python-dotenv
 groq==0.9.0
+sse-starlette
 
 langchain
 langchain-community
